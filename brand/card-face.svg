@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 700" width="500" height="700" role="img" aria-label="Dubilluminaughty card">
+  <title>Dubilluminaughty card</title>
+  <!--
+    The card face as a flat image, for the water shader to sample as a
+    texture. Kept in sync by eye with PlayingCard.tsx — it is the reflection
+    only, so small drift is invisible under the ripple distortion.
+  -->
+  <defs>
+    <linearGradient id="face" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#2b2c32"/>
+      <stop offset="0.46" stop-color="#1b1c20"/>
+      <stop offset="1" stop-color="#121317"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="500" height="700" rx="35" fill="url(#face)"/>
+  <rect x="25" y="25" width="450" height="650" rx="25" fill="none" stroke="#dbb152" stroke-opacity="0.2" stroke-width="2"/>
+
+  <!-- Crown: the traced silhouette, scaled from its 143x160 box. -->
+  <g transform="translate(250 265) scale(1.55) translate(-71.5 -80)">
+    <g stroke="#f2f2ef" fill="none" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="8">
+      <path d="M 8 152 L 1 2 L 15 38 L 22.5 22 L 50 67 L 70.5 32 L 92 67 L 119.5 22 L 128 38 L 142 2 L 135 152" stroke-width="5"/>
+      <g stroke-width="3.5" stroke-linecap="round" opacity="0.9">
+        <line x1="50" y1="67" x2="92" y2="140"/>
+        <line x1="92" y1="67" x2="50" y2="140"/>
+      </g>
+      <g stroke-width="1.5" opacity="0.55">
+        <circle cx="71" cy="104.5" r="11.5"/>
+        <circle cx="71" cy="104.5" r="17"/>
+        <circle cx="71" cy="104.5" r="23.5"/>
+      </g>
+      <rect x="10" y="137" width="121" height="16" stroke-width="3.5"/>
+    </g>
+    <circle cx="71" cy="104.5" r="4" fill="#f2f2ef"/>
+  </g>
+
+  <!-- Wordmark, from public/brand/wordmark.svg (861x114). -->
+  <g transform="translate(250 455) scale(0.44) translate(-430.5 -57)">
+    <path fill="#f2f2ef" fill-rule="evenodd" d="M0 4L16 0L52 50L16 100L0 104ZM16 60L34 50L16 40ZM57 6L75 0L75 84L57 84ZM91 0L109 6L109 84L91 84ZM57 72L109 72L88 104L78 104ZM114 6L132 0L132 104L114 100ZM128 2L164 24L128 46ZM128 54L168 78L128 102ZM137 32L151 24L137 16ZM137 90L154 78L137 66ZM173 0L199 0L186 52ZM186 52L199 104L173 104ZM204 6L222 0L222 84L204 84ZM204 74L252 66L226 106ZM257 6L275 0L275 84L257 84ZM257 74L305 66L279 106ZM310 6L328 0L328 84L310 84ZM344 0L362 6L362 84L344 84ZM310 72L362 72L341 104L331 104ZM367 8L383 0L389 100L373 104ZM417 0L433 8L427 104L411 100ZM385 0L401 66L415 0ZM438 0L464 0L451 52ZM451 52L464 104L438 104ZM469 6L487 0L487 100L471 104ZM503 0L521 6L519 104L503 100ZM469 2L483 0L521 98L507 102ZM552 0L578 100L564 106L552 54L540 106L526 100ZM544 54L560 54L552 20ZM583 6L601 0L601 84L583 84ZM617 0L635 6L635 84L617 84ZM583 72L635 72L614 104L604 104ZM694 16L676 2L654 8L640 50L652 96L676 104L694 90L694 50L668 50L668 68L678 68L678 80L664 84L656 52L662 24L678 24ZM699 6L717 0L717 100L701 104ZM733 0L751 6L749 104L733 100ZM717 40L733 40L733 60L717 60ZM756 0L806 0L800 20L762 20ZM772 14L790 14L785 104L777 104ZM811 0L826 0L836 46L846 0L861 0L842 62L842 104L830 104L830 62Z"/>
+  </g>
+
+  <!-- Corner pips. -->
+  <g fill="none" stroke="#dbb152" stroke-width="7" stroke-linejoin="miter">
+    <path d="M 8 152 L 1 2 L 15 38 L 22.5 22 L 50 67 L 70.5 32 L 92 67 L 119.5 22 L 128 38 L 142 2 L 135 152" transform="translate(52 52) scale(0.26)"/>
+    <path d="M 8 152 L 1 2 L 15 38 L 22.5 22 L 50 67 L 70.5 32 L 92 67 L 119.5 22 L 128 38 L 142 2 L 135 152" transform="translate(448 648) rotate(180) scale(0.26)"/>
+  </g>
+</svg>
