@@ -1,1 +1,0 @@
-const t=[{slug:"placeholder-artist",name:"Artist One",role:"Placeholder — selector / producer",bio:"Placeholder entry. Replace with the real roster."}],l=e=>t.find(r=>r.slug===e);export{t as c,l as f};
