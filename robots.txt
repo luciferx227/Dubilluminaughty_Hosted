@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 
-# Set the real host once the domain exists.
-# Sitemap: https://example.invalid/sitemap.xml
+# No sitemap yet. Add one here once the production domain exists — and note
+# that a crawler only reads this file at the host root, so on the preview
+# copy (a Pages sub-path) it is never fetched. That target's noindex is a
+# meta tag instead; see scripts/deploy.mjs.
